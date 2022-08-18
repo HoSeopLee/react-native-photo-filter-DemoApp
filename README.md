@@ -41,7 +41,7 @@
 
 - ios 같은 경우 info.plist 에
 
-```plist
+```xml
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>$(PRODUCT_NAME) Requires access to the gallery.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
@@ -73,7 +73,7 @@
 
 - ios 같은 경우 info.plist 에
 
-```plist
+```xml
 	<key>NSCameraUsageDescription</key>
 	<string>$(PRODUCT_NAME) needs access to your Camera.</string>
   <string>$(PRODUCT_NAME) needs access to your Microphone.</string>
