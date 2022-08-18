@@ -1,7 +1,8 @@
-import {TouchableOpacity, Text, SafeAreaView, Modal, View} from 'react-native';
-import React from 'react';
+import {TouchableOpacity, Text, SafeAreaView, Platform} from 'react-native';
+import React, {useEffect} from 'react';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {MainParamList} from '~/router/router.types';
+import {AndroidPermissionsCheck, IOSPermissionsCheck} from './Permistion';
 
 type MainPageProps = NativeStackScreenProps<MainParamList, 'Main_Page'>;
 interface Props {
@@ -9,10 +10,15 @@ interface Props {
   route: MainPageProps['route'];
 }
 const Main_Page = ({navigation}: Props) => {
+  useEffect(() => {
+    Platform.OS === 'android'
+      ? AndroidPermissionsCheck()
+      : IOSPermissionsCheck();
+  }, []);
+
   return (
     <>
       <SafeAreaView style={{flex: 0, backgroundColor: '#fff'}} />
-
       <SafeAreaView
         style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
         <TouchableOpacity

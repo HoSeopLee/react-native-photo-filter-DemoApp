@@ -32,7 +32,14 @@ function Router() {
           headerShown: false,
           tabBarStyle: {
             backgroundColor: ColorWhite,
-            height: 50,
+            shadowColor: 'rgb(50, 50, 50)',
+            shadowOpacity: 0.2,
+            shadowRadius: 10,
+            shadowOffset: {
+              height: 6,
+              width: 0,
+            },
+            elevation: 6,
           },
         }}>
         <Tab.Screen
