@@ -3,7 +3,6 @@ import {
   PERMISSIONS,
   requestMultiple,
   checkMultiple,
-  PermissionStatus,
 } from 'react-native-permissions';
 import RNExitApp from 'react-native-exit-app';
 
